@@ -12,7 +12,7 @@ function App() {
       <div className="cont">
         <div className="nav">
           <VisibilityIcon />
-          MARKDOWN
+          Edit Markdown File
         </div>
         <textarea
           className="textarea"
@@ -25,7 +25,7 @@ function App() {
       <div className="cont">
         <div className="nav">
           <VisibilityIcon />
-          PREIVEW
+          Preview
         </div>
         <ReactMarkdown
           source={input}
