@@ -20,9 +20,9 @@ body {
   width: 45%;
   height: 95%;
   margin: 20px;
-  background: #f7fafc;
+  background: #138d42;
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(196, 157, 157);
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +31,7 @@ body {
   height: 40px;
   border-bottom: 1px solid #ddd;
   display: flex;
-  background: #fff;
+  background: rgb(196, 157, 157);
   align-items: center;
   font-size: 15px;
 }
@@ -52,7 +52,8 @@ textarea {
 }
 
 .markdown {
-  padding: 30px;
+
+  padding-left:27px;
   border: none;
   outline: none !important;
   width: 96%;
@@ -60,4 +61,14 @@ textarea {
   overflow-x: hidden;
   resize: none;
   background: #fff;
+}
+
+.dark{
+  background-color: black;
+  color: black;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }

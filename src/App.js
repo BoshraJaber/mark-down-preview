@@ -4,14 +4,34 @@ import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import EditIcon from '@material-ui/icons/Edit';
+import DarkModeToggle from "react-dark-mode-toggle";
+
 
 function App() {
   const [input, setInput] = useState();
+  const [isDarkMode, setIsDarkMode] = useState("App");
+  const [isDarkBtn, setIsDarkBtn] = useState(false);
+  function toggleTheme(){
+    if(isDarkMode=="App"){
+      setIsDarkMode("dark")
+      setIsDarkBtn(true)
+    } else {
+      setIsDarkMode("App")
+      setIsDarkBtn(false)
+    }
+  }
   return (
-    <div className="App">
+  
+    <div className={isDarkMode}>
+        <DarkModeToggle
+      onChange={toggleTheme}
+      checked={isDarkBtn}
+      size={80}
+    />
       <div className="cont">
         <div className="nav">
-          <VisibilityIcon />
+          <EditIcon />
           Edit Markdown File
         </div>
         <textarea
